@@ -68,14 +68,9 @@ Adjust paths and namespaces as needed for your implementation.
 
 ## Demonstration Video
 
-- Create a 4–5 minute video that includes:
-	- A short talking-head introduction (required for accreditation).
-	- A live demo of adding a recipe, generating a menu, and exporting the shopping list.
-	- A brief walkthrough of key code files and what you learned.
+A 4–5 minute video demonstrating the application execution and code walkthrough:
 
-- Paste your video URL here when ready:
-
-[Software Demo Video](http://youtube.link.goes.here)
+[Software Demo Video](https://www.youtube.com/watch?v=M_619TTXRS4)
 
 ## Sprint Plan (2-week module summary)
 
