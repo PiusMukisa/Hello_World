@@ -10,8 +10,7 @@ using Hello_World.Services;
 
 Console.WriteLine("MenuPlanner - C# Module Demonstration\n");
 
-// Variables & expressions
-int sampleCount = 3;
+// Load recipes from storage
 var recipes = StorageService.LoadRecipes();
 
 if (recipes.Count == 0)

@@ -16,7 +16,7 @@ namespace Hello_World.Services
 
         public static void EnsureDataFolder()
         {
-            var dir = Path.GetDirectoryName(RecipesFile);
+            var dir = Path.GetDirectoryName(RecipesFile) ?? "data";
             if (!Directory.Exists(dir)) Directory.CreateDirectory(dir);
         }
 

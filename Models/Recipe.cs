@@ -9,9 +9,9 @@ namespace Hello_World.Models
     /// </summary>
     public class Recipe
     {
-        public string Name { get; set; }
+        public string Name { get; set; } = string.Empty;
         public List<Ingredient> Ingredients { get; set; } = new List<Ingredient>();
-        public string Instructions { get; set; }
+        public string Instructions { get; set; } = string.Empty;
 
         public Recipe() { }
 
