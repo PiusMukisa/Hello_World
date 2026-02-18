@@ -1,6 +1,6 @@
 [
   {
-    "Name": "Pasta",
+    "Name": "Pasta Carbonara",
     "Ingredients": [
       {
         "Name": "Pasta",
@@ -8,12 +8,17 @@
         "Unit": "lb"
       },
       {
-        "Name": "Tomato Sauce",
-        "Quantity": 2,
-        "Unit": "cups"
+        "Name": "Eggs",
+        "Quantity": 3,
+        "Unit": "pcs"
+      },
+      {
+        "Name": "Bacon",
+        "Quantity": 0.5,
+        "Unit": "lb"
       }
     ],
-    "Instructions": "Boil pasta. Heat sauce. Combine."
+    "Instructions": "Boil pasta. Fry bacon. Mix with eggs off heat."
   },
   {
     "Name": "Omelette",
@@ -32,7 +37,7 @@
     "Instructions": "Beat eggs with milk. Cook in pan."
   },
   {
-    "Name": "Salad",
+    "Name": "Thai Green Curry Salad",
     "Ingredients": [
       {
         "Name": "Lettuce",
@@ -43,8 +48,13 @@
         "Name": "Tomato",
         "Quantity": 2,
         "Unit": "pcs"
+      },
+      {
+        "Name": "Green Curry Paste",
+        "Quantity": 2,
+        "Unit": "tbsp"
       }
     ],
-    "Instructions": "Chop and toss with dressing."
+    "Instructions": "Chop and toss with curry dressing."
   }
 ]

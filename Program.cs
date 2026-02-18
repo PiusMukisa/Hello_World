@@ -96,13 +96,15 @@ static List<string> ExportShoppingList(List<Recipe> menu)
 }
 
 // Demonstrate classes, structs, and use of the union-like ValueUnion
+// Also demonstrates inheritance with SpecialtyRecipe extending Recipe
 static List<Recipe> CreateSampleRecipes()
 {
-	var r1 = new Recipe("Pasta", new List<Ingredient>
+	var r1 = new SpecialtyRecipe("Pasta Carbonara", new List<Ingredient>
 	{
 		new Ingredient("Pasta", 1.0, "lb"),
-		new Ingredient("Tomato Sauce", 2.0, "cups")
-	}, "Boil pasta. Heat sauce. Combine.");
+		new Ingredient("Eggs", 3, "pcs"),
+		new Ingredient("Bacon", 0.5, "lb")
+	}, "Boil pasta. Fry bacon. Mix with eggs off heat.", "Italian");
 
 	var r2 = new Recipe("Omelette", new List<Ingredient>
 	{
@@ -110,11 +112,12 @@ static List<Recipe> CreateSampleRecipes()
 		new Ingredient("Milk", 0.25, "cups")
 	}, "Beat eggs with milk. Cook in pan.");
 
-	var r3 = new Recipe("Salad", new List<Ingredient>
+	var r3 = new SpecialtyRecipe("Thai Green Curry Salad", new List<Ingredient>
 	{
 		new Ingredient("Lettuce", 1, "head"),
-		new Ingredient("Tomato", 2, "pcs")
-	}, "Chop and toss with dressing.");
+		new Ingredient("Tomato", 2, "pcs"),
+		new Ingredient("Green Curry Paste", 2, "tbsp")
+	}, "Chop and toss with curry dressing.", "Thai");
 
 	// Example of union-like usage (ValueUnion)
 	var u = new ValueUnion();
@@ -124,7 +127,22 @@ static List<Recipe> CreateSampleRecipes()
 	double unionAsDouble = u.DoubleValue; // may produce a non-sensical double
 
 	// Show that we used the union value (print to demonstrate)
+	Console.WriteLine($"\n--- Demonstrating Union Type ---");
 	Console.WriteLine($"Union raw bytes interpreted as double: {unionAsDouble}");
+
+	// Demonstrate inheritance: SpecialtyRecipe extends Recipe
+	Console.WriteLine($"\n--- Demonstrating Inheritance ---");
+	foreach (var recipe in new List<Recipe> { r1, r2, r3 })
+	{
+		if (recipe is SpecialtyRecipe specialty)
+		{
+			Console.WriteLine($"Specialty: {specialty} - {specialty.GetCuisineSummary()}");
+		}
+		else
+		{
+			Console.WriteLine($"Regular: {recipe}");
+		}
+	}
 
 	return new List<Recipe> { r1, r2, r3 };
 }
